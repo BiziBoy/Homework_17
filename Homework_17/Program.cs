@@ -14,7 +14,7 @@ namespace Homework_17
       {
         return value;
       }
-      return SumNumbers((value - value % 10) / 10) + value % 10;
+      return SumNumbers(value / 10) + value % 10;
     }
 
     static void Main(string[] args)
