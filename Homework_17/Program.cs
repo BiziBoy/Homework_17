@@ -14,11 +14,15 @@ namespace Homework_17
       {
         return value;
       }
-      int part = (value - value % 10) / 10;
-      return SumNumbers(part) + 
+      return SumNumbers((value - value % 10) / 10) + value % 10;
     }
+
     static void Main(string[] args)
     {
+      Console.Write("Введите число, у которого будет найдена сумма цифр: ");
+      int a = int.Parse(Console.ReadLine());
+      Console.WriteLine($"Сумма цифр числа {a}: {SumNumbers(a)} ");
+      Console.ReadLine();
     }
   }
 }
